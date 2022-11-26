@@ -1,36 +1,47 @@
-<script setup>
+<script>
+ import QRCodeCard from './components/QRCodeCard.vue'
+
+ export default {
+   components: {
+     QRCodeCard
+   }
+ }
 </script>
 
 <template>
-  <div>
+  <div class="content">
+    <QRCodeCard/>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Cheow Fu</a>.
   </div>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
+.content {
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: hsl(212, 45%, 89%);
+ }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+ .attribution {
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: black;
+   font-size: 11px;
+   text-align: center;
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+ }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+ .attribution a {
+   color: hsl(228, 45%, 44%);
+ }
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
+   /* .attribution { font-size: 11px; text-align: center; } */
+   /* .attribution a { color: hsl(228, 45%, 44%); } */
 </style>
